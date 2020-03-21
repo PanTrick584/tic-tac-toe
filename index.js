@@ -35,24 +35,62 @@ function addMark() {
         console.log(gambleContent)
         console.log(gambleContent.length)
         console.log(gambleContentID)
-        winCondition(gambleContentID)
+        winConditionX()
+        winConditionO()
         
 
 }
 
 
-function winCondition(gambleContentID) {
+function winConditionX() {
 
-    console.log(gambleContentID)
     if(field1.innerHTML === 'X' && field5.innerHTML === 'X' && field9.innerHTML === 'X'){
         console.log('WYGRAŁEŚ!!')
     }else if(field1.innerHTML === 'X' && field2.innerHTML === 'X' && field3.innerHTML === 'X'){
         console.log('WYGRAŁEŚ!!')
+    }else if(field1.innerHTML === 'X' && field4.innerHTML === 'X' && field7.innerHTML === 'X'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field4.innerHTML === 'X' && field5.innerHTML === 'X' && field6.innerHTML === 'X'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field7.innerHTML === 'X' && field8.innerHTML === 'X' && field9.innerHTML === 'X'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field2.innerHTML === 'X' && field5.innerHTML === 'X' && field8.innerHTML === 'X'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field3.innerHTML === 'X' && field6.innerHTML === 'X' && field9.innerHTML === 'X'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field1.innerHTML === 'X' && field5.innerHTML === 'X' && field9.innerHTML === 'X'){
+        console.log('WYGRAŁEŚ!!')
     }
+    // else if(fields.every(el => el.innerHTML !== '')){
+    //     console.log('REMIS')
+    // }
 }
+
+function winConditionO() {
+
+    if(field1.innerHTML === 'O' && field5.innerHTML === 'O' && field9.innerHTML === 'O'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field1.innerHTML === 'O' && field2.innerHTML === 'O' && field3.innerHTML === 'O'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field1.innerHTML === 'O' && field4.innerHTML === 'O' && field7.innerHTML === 'O'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field4.innerHTML === 'O' && field5.innerHTML === 'O' && field6.innerHTML === 'O'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field7.innerHTML === 'O' && field8.innerHTML === 'O' && field9.innerHTML === 'O'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field2.innerHTML === 'O' && field5.innerHTML === 'O' && field8.innerHTML === 'O'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field3.innerHTML === 'O' && field6.innerHTML === 'O' && field9.innerHTML === 'O'){
+        console.log('WYGRAŁEŚ!!')
+    }else if(field1.innerHTML === 'O' && field5.innerHTML === 'O' && field9.innerHTML === 'O'){
+        console.log('WYGRAŁEŚ!!')
+    }
+    // else if(Array.from(fields.every(el => el.innerHTML !== ''))){
+    //     console.log('REMIS')
+    // }
+}
+
 //Events
 fields.forEach(field => field.addEventListener('click', addMark))
-
-winCondition(gambleContentID)
 
 
