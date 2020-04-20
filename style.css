@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
 
+:root{
+    --primary-color: #6e5768;
+    --secondary-color: #d9db5a;
+}
 
 *{
     box-sizing: border-box;
@@ -8,6 +12,8 @@
 body{
     font-family: 'Source Code Pro', monospace;
     margin: 0;
+    background-color: var(--primary-color);
+
 
 }
 
@@ -17,15 +23,17 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #6e5768;
-    font-size: 10rem;
-
+    font-size: 3rem;
+}
+.container h2{
+    font-size: 1rem;
 }
 
 .field-container{
     display:flex;
     flex-direction: row;
     margin-top: 10px;
+    font-size: 10rem;
 }
 
 .field{
@@ -33,6 +41,45 @@ body{
     width: 200px;
     height: 200px;
     margin-left: 10px;
-    background-color: #d9db5a;
+    background-color: var(--secondary-color);
     text-align: center;
+}
+
+.message-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.message{
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.message button{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-family: 'Source Code Pro', monospace;;
+    font-size: 16px;
+}
+
+.message button:active{
+    transform: scale(0.98);
+}
+
+.message button:focus{
+    outline: none;
 }
